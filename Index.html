@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.css">
+  </head>
+  <body>
+
+
+
+<!-- Top bar start -->
+    <div class="container">
+        <div class="header ">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12  ">
+                <a class="text-left" href="Product_page.html"><img src="assets/images/logo.jpg" alt="" width="160px" height="85px"></a>
+            </div>
+            <div class="col-xl-5 col-lg-5 col-md-6 col-sm-12 col-12 search-bar">
+                
+                <form class="example" action="/action_page.php">
+                    <input type="text" placeholder="What are you looking for?" name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+               
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                <div class="icon">
+                <div class="row mt-4 text-center">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-3 wishlist">
+                      <div class="wishlist">
+                          <a  href="#">
+                            <img src="assets/images/1st.jpg" alt="" width="30px" height="20px">
+                            <br><small >Wishlist</small></i>
+                          </a>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-3 contact-us"><div class="contact-us">
+                      <a  href="#"><img src="assets/images/2nd.jpg" alt="" width="28px" height="20px"><br><small>Contact Us</small></i></a></div></div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-3 account"><div class="account">
+                      <a href="#"><img src="assets/images/3rd.jpg" alt="" width="25px" height="20px"><br><small>Account</small></i></a></div></div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-3  basket"><div class="basket">
+                      <a href="#"><img src="assets/images/4th.jpg" alt="" width="30px" height="20px"><br><small>Basket</small></i></a></div></div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation bar start -->
+<div class="navi">
+<div class="container ">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav m-auto">
+            <li>
+              <a class="nav1" href="#"
+                >FURNITURE </a
+              >
+            </li>
+            <li>
+              <a class="nav1" href="#"
+                >MIRRORS</a
+              >
+            </li>
+            <li>
+              <a class="nav1" href="#"
+                >SUITES </a
+              >
+            </li>
+
+            <li>
+              <a class="nav1" href="#"
+                >SHOWERS </a
+              >
+            </li>
+
+            <li>
+              <a class="nav1" href="#"
+                >ENCLOSURES </a
+              >
+            </li>
+            <li>
+              <a class="nav1" href="#"
+                >BATHS </a
+              >
+            </li>
+
+            <li>
+              <a class="nav1" href="#"
+                >TILES </a
+              >
+            </li>
+
+            <li>
+              <a class="nav1" href="#"
+                >TAPS </a
+              >
+            </li>
+
+            <li>
+              <a class="nav1" href="#"
+                >ACCESSORIES</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      </div>
+      <div class="toggle">
+        <div id="t-overlay" onclick="togglemenu()" style="display: none;"></div>
+        <div id="sidebar" onclick="togglemenu()">
+          <div class="toggle-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul>
+            <li>FURNITURE</li>
+            <li>MIRRORS</li>
+            <li>SUITES</li>
+            <li>SHOWERS</li>
+            <li>ENCLOSURES</li>
+            <li>BATHS</li>
+            <li>TILES</li>
+            <li>TAPS</li>
+            <li>ACCESSORIES</li>
+          </ul>
+        </div>
+      </div>
+      <script>
+        $(document).ready(function(){
+          $(".toggle-btn").click(function(){
+            $(".toggle-btn").hide();
+          });
+        });
+        $(document).ready(function(){
+          $("#t-overlay").click(function(){
+            $(".toggle-btn").show();
+          });
+        });
+        function togglemenu() {
+          overlayToggle()
+          document.getElementById("sidebar").classList.toggle("active");
+         
+        }
+        
+        function overlayToggle() {
+        var x = document.getElementById("t-overlay");
+       
+        if (x.style.display === "none") {
+          x.style.display = "block";
+         
+        } else {
+          x.style.display = "none";
+        }
+      }
+      </script>
+      </div>
+
+<!-- Home Delivery Section -->
+<div class="home">
+<div class="container">
+    <div class="van">
+    <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 ">
+                    <img class="show-van" src="assets/images/van.jpg" alt="" width="33px" height="25px"> 
+                    
+                </div>
+                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 ">
+                        <p class="para"> Free Delivery over £150 <br><small class="para2">On orders to most of the UK</small></p>
+                    </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 ">
+                    <img class="show-van" src="assets/images/van.jpg" alt="" width="33px" height="25px"> 
+                    
+                </div>
+                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 ">
+                        <p class="para"> Free Delivery over £150 <br><small class="para2">On orders to most of the UK</small></p>
+                    </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 ">
+                    <img class="show-van" src="assets/images/van.jpg" alt="" width="33px" height="25px"> 
+                    
+                </div>
+                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 ">
+                        <p class="para"> Free Delivery over £150 <br><small class="para2">On orders to most of the UK</small></p>
+                    </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 ">
+                    <img class="show-van" src="assets/images/van.jpg" alt="" width="33px" height="25px"> 
+                    
+                </div>
+                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 ">
+                        <p class="para"> Free Delivery over £150 <br><small class="para2">On orders to most of the UK</small></p>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+<!-- SLIDER SECTION START -->
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="slider">
+    
+        <div class="row sli">
+            <div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
+                <a href="#"><img class="sli2" src="assets/images/slid_1.jpg" alt="" width="100%" ></a>
+            </div>
+           
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                <a href="#"> <h3 class="slider1 ">GET THE LUXURY <br> LOOK FOR LESS</h3></a>
+                <p class="slider2">Lorem ipsum dolor sit amet, consectetur <br>adipisicing elit, sed do eiusmod tempor<br> incididunt ut labore et dolore magna aliqua. </p>
+            </div>
+        </div>
+    
+</div>
+    </div>
+    <div class="carousel-item">
+      <div class="slider">
+    
+        <div class="row sli">
+            <div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
+                <a href="#"><img class="sli2" src="assets/images/slid_1.jpg" alt="" width="100%" ></a>
+            </div>
+           
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                <a href="#"> <h3 class="slider1 ">GET THE LUXURY <br> LOOK FOR LESS</h3></a>
+                <p class="slider2">Lorem ipsum dolor sit amet, consectetur <br>adipisicing elit, sed do eiusmod tempor<br> incididunt ut labore et dolore magna aliqua. </p>
+            </div>
+        </div>
+    
+</div>
+    </div>
+    <div class="carousel-item">
+      <div class="slider">
+    
+        <div class="row sli">
+            <div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
+                <a href="#"><img class="sli2" src="assets/images/slid_1.jpg" alt="" width="100%" ></a>
+            </div>
+           
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                <a href="#"> <h3 class="slider1 ">GET THE LUXURY <br> LOOK FOR LESS</h3></a>
+                <p class="slider2">Lorem ipsum dolor sit amet, consectetur <br>adipisicing elit, sed do eiusmod tempor<br> incididunt ut labore et dolore magna aliqua. </p>
+            </div>
+        </div>
+    
+</div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+
+
+<!-- Slider end -->
+
+    <div class="centre">
+    <h5 class="text-center centre1"><b>FAMILIAR BRANDS, UNFAMILIAR PRICES</b></h5>
+    </div>
+
+
+    <!-- Image Gallery -->
+ <div class="home2">
+     <div class="container">
+         <div class="row">
+             <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+                <div class="category-box">
+                    <img src="assets/images/pic1.jpg" alt="Avatar"  class="image">
+                    <div class="overlay">
+                    <div class="text-1"><b>FURNITURE</b></div>
+                    </div>
+                </div>
+             </div>
+             <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+                <div class="category-box">
+                    <img src="assets/images/pic2.jpg" alt="Avatar"  class="image">
+                    <div class="overlay">
+                    <div class="text-1"><b>MIRRORS</b></div>
+                    </div>
+                </div>
+             </div>
+             <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+                <div class="category-box">
+                    <img src="assets/images/pic3.jpg" alt="Avatar"  class="image">
+                    <div class="overlay">
+                    <div class="text-1"><b>HEATING</b></div>
+                    </div>
+                </div>
+             </div>
+             <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+                <div class="category-box">
+                    <img src="assets/images/pic4.jpg" alt="Avatar"  class="image">
+                    <div class="overlay">
+                    <div class="text-1"><b>SUITES</b></div>
+                    </div>
+                </div>
+             </div>
+             <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+                <div class="category-box">
+                    <img src="assets/images/pic5.jpg" alt="Avatar"  class="image">
+                    <div class="overlay">
+                    <div class="text-1"><b>SHOWERS</b></div>
+                    </div>
+                </div>
+             </div>
+             <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+                <div class="category-box">
+                    <img src="assets/images/pic6.jpg" alt="Avatar"  class="image">
+                    <div class="overlay">
+                    <div class="text-1"><b>ENCLOSURES</b></div>
+                    </div>
+                </div>
+             </div>
+              
+             <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+                <div class="category-box  next-six">
+                    <img src="assets/images/pic7.jpg" alt="Avatar"  class="image">
+                    <div class="overlay">
+                    <div class="text-1"><b>BATHS</b></div>
+                    </div>
+                </div>
+             </div>
+             <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+                <div class="category-box  next-six">
+                    <img src="assets/images/pic8.jpg" alt="Avatar"  class="image">
+                    <div class="overlay">
+                    <div class="text-1"><b>TILES</b></div>
+                    </div>
+                </div>
+             </div>
+             <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+                <div class="category-box next-six  ">
+                    <img src="assets/images/pic9.jpg" alt="Avatar"  class="image">
+                    <div class="overlay">
+                    <div class="text-1"><b>TAPS</b></div>
+                    </div>
+                </div>
+             </div>
+             <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+                <div class="category-box  next-six ">
+                    <img src="assets/images/pic10.jpg" alt="Avatar"  class="image">
+                    <div class="overlay">
+                    <div class="text-1"><b>ACCESSORIES</b></div>
+                    </div>
+                </div>
+             </div>
+             <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+                <div class="category-box  next-six ">
+                    <img src="assets/images/pic11.jpg" alt="Avatar"  class="image">
+                    <div class="overlay">
+                    <div class="text-1"><b>SALE</b></div>
+                    </div>
+                </div>
+             </div>
+             <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+                <div class="category-box next-six ">
+                    <img src="assets/images/pic9.jpg" alt="Avatar"  class="image">
+                    <div class="overlay">
+                    <div class="text-1"><b>CLEARANCE</b></div>
+                    </div>
+                </div>
+             </div>
+
+
+
+         </div>
+
+     </div>
+
+
+ <!-- Overlay section -->
+<div class="home-back">
+     <div class="container">
+         <div class="row">
+             <div class="image1 home3">
+                <div class=" img1 mt-5"> 
+                    <a href=""><img  src="assets/images/pic_1.jpg" alt=""  width="100%" > </a><div class="overlay2">
+                    <div class="text2"><h4 class="heading">EVERYDAY VALUE</h4><small><P class="text-left">Everyday bathrooms for everyday prices. Get luxury for less with Bathroom Mountain</P></small>
+                        <button class="button ">Shop value baths</button> </div>
+                  </div>
+             </div>
+         </div>
+
+
+
+       
+         <div class="image2">
+            <a href=""><img class="p2" src="assets/images/Home_Page_06.jpg" alt=""  width="100%" > </a>
+            <button class="btn">Button</button>
+           </div>
+
+  
+
+           <div class="image3">
+            <a href=""><img class="p3" src="assets/images/Home_Page_11.jpg" alt=""  width="100%" > </a>
+            <button class="btn">Button</button>
+           </div>
+           
+           <div class="image4">
+            <div class="sohail">
+                <a href=""><img  src="assets/images/Home_Page_09.jpg" alt=""  width="100%" > </a>
+                <div class="over">
+                  <div class="textt"><h4>INSPIRATION AND IDEAS</h4> <small><p>A hand-picked selection of inspirational bathrooms, styling advice, tips, tricks and more</p></small>
+                    <button class="button2 ">Shop value baths</button> </div>
+                </div>
+                </div></div>
+
+     
+    </div>
+ </div>
+</div>
+
+<!-- Owl carousel section start -->
+<div class="carousel-start">
+<div class="container">
+<div class="owl-carousel owl-theme  bg-carousel">
+  <div class="item mt-3"><img  src="assets/images/Home_Page_05.jpg" alt=""  width="100%" ></div>
+  <div class="item mt-3"><img  src="assets/images/Home_Page_03.jpg" alt=""  width="100%" ></div>
+  <div class="item mt-3"><img  src="assets/images/Home_Page_05.jpg" alt=""  width="100%" ></div>
+  <div class="item mt-3"><img  src="assets/images/Home_Page_03.jpg" alt=""  width="100%" ></div>
+  <div class="item mt-3"><img  src="assets/images/Home_Page_05.jpg" alt=""  width="100%" ></div>
+  <div class="item mt-3"><img  src="assets/images/Home_Page_03.jpg" alt=""  width="100%" ></div>
+  <div class="item mt-3"><img  src="assets/images/Home_Page_05.jpg" alt=""  width="100%" ></div>
+  <div class="item mt-3"><img  src="assets/images/Home_Page_03.jpg" alt=""  width="100%" ></div>
+  <div class="item mt-3"><img  src="assets/images/Home_Page_05.jpg" alt=""  width="100%" ></div>
+  <div class="item mt-3"><img  src="assets/images/Home_Page_03.jpg" alt=""  width="100%" ></div>
+  <div class="item mt-3"><img  src="assets/images/Home_Page_05.jpg" alt=""  width="100%" ></div>
+  <div class="item mt-3"><img  src="assets/images/Home_Page_03.jpg" alt=""  width="100%" ></div>
+</div>
+</div>
+</div>
+
+<script src="jquery.min.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        dots:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:6
+            }
+        }
+        });
+    });
+</script>
+
+
+<!-- Footer section -->
+<div class="ful_ftr">
+<footer class="ftr">
+  <div class="ftr-line"></div>
+  
+    <div class="row abc">
+      <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 ftr-bg">
+        <div class="contaier">
+          <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+            
+              <footer>
+                <ul class="ftr-mrg">
+                  <li><a href="#"></i><b> Useful Links</b></a></li>
+                  
+                  <li class="mt-4"><a href="#"><i class="fa fa-chevron-right  mr-2" style="font-size:15px"  aria-hidden="true"></i> Get in touch</a></li>
+                  <li><a href="#"><i class="fa fa-chevron-right  mr-2" style="font-size:15px" aria-hidden="true"></i> Interest Free credit</a></li>
+                  <li><a href="#"><i class="fa fa-chevron-right  mr-2" style="font-size:15px" aria-hidden="true"></i>Delivery Info</a></li>
+                  <li><a href="#"><i class="fa fa-chevron-right  mr-2" aria-hidden="true"></i>Return an item</a></li>
+                  <li><a href="#"><i class="fa fa-chevron-right  mr-2" style="font-size:15px" aria-hidden="true"></i>Our T&C's</a></li>
+                  <li><a href="#"><i class="fa fa-chevron-right  mr-2" style="font-size:15px" aria-hidden="true"></i> Our product guarantees</a></li>
+                  <li><a href="#"><i class="fa fa-chevron-right  mr-2" style="font-size:15px" aria-hidden="true"></i> PR & Media</a></li>
+                </ul>
+              </footer>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+              <footer>
+                <ul class="ftr-mrg">
+                  <li><a href="#"></i> <b>Here to help</b></a></li>
+                  <li class="mt-4"><a href="#"><i class="fa fa-chevron-right mr-2" style="font-size:15px" aria-hidden="true"></i>Help & Advice</a></li>
+                  <li><a href="#"><i class="fa fa-chevron-right  mr-2" style="font-size:15px" aria-hidden="true"></i>Request a catalogue</a></li>
+                  <li><a href="#"><i class="fa fa-chevron-right  mr-2" style="font-size:15px" aria-hidden="true"></i> Our Blog</a></li>
+                  <li><a href="#"><i class="fa fa-chevron-right  mr-2" style="font-size:15px" aria-hidden="true"></i> Buying guides</a></li>
+                  <li><a href="#"><i class="fa fa-chevron-right  mr-2" style="font-size:15px" aria-hidden="true"></i> FAQ's</a></li>
+                  <li><a href="#"><i class="fa fa-chevron-right  mr-2" style="font-size:15px" aria-hidden="true"></i>Offers</a></li>
+                  <li><a href="#"><i class="fa fa-chevron-right  mr-2" style="font-size:15px" aria-hidden="true"></i>Our Experts</a></li>
+                </ul>
+              </footer>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+              <footer>
+                <ul class="ftr-mrg">
+                  <li><a href="#"></i><b>Your links</b></a></li>
+                  <li class="mt-4"><a href="#"><i class="fa fa-chevron-right  mr-2" style="font-size:15px" aria-hidden="true"></i> Your account</a></li>
+                  <li><a href="#"><i class="fa fa-chevron-right  mr-2" style="font-size:15px" aria-hidden="true"></i>Your Order</a></li>
+                  <li><a href="#"><i class="fa fa-chevron-right mr-2" style="font-size:15px" aria-hidden="true"></i> Your wishlist</a></li>
+                  </ul>
+                </footer>
+                <h4 class="folow">Follow Us</h4>
+              
+              <form>  <ul>
+                <Li><a href="#"><img  src="assets/images/footer-fb-icon.png" alt=""  ></a></Li>
+                <Li><a href="#"><img  src="assets/images/footer-twitter-icon.png" alt=""  ></a></Li>
+                <Li><a href="#"><img  src="assets/images/footer-in-icon.png" alt=""  ></a></Li>
+                <Li><a href="#"><img  src="assets/images/footer-insta-icon.png" alt=""  ></a></Li>
+                <Li><a href="#"><img  src="assets/images/footer-youtub-icon.png" alt=""  ></a></Li>
+                <Li><a href="#"><img  src="assets/images/footer-print-icon.png" alt=""  ></a></Li>
+              </ul></form>
+            </div>
+          </div>
+          
+        </div>
+       
+      </div>
+      
+      <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 ftr-bg2">
+       <h4 class="stay"> Stay in the know</h4> 
+       <p class="stay2">Get all the products,offers,trends <br>
+        and blogs direct to your inbox.Sign up to our<br>
+         mailing list today!</p>
+        
+ 
+          <div class="input-group mb-3">
+            <input type="email" class="form-control" placeholder="Enter your email address">
+            <div class="input-group-append">
+              <button class="last-btn" type="submit"><i class="fa fa-chevron-right mr-2" style="font-size:15px" aria-hidden="true"></i></button>  
+            </div>
+
+            <p class="par1">We'll never share your details, read our<br> <b class="bld">privacy policy</b> 
+            for more information</p>
+
+           
+          </div>
+     
+    </div>
+
+</footer>
+<div class="end">
+<div class="row">
+  <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 ">
+    <h4 class="bld2"> Acceped payment method</h4>
+    <span>
+    <ul>
+      <li> <a href="#"> <img src="assets/images/footer-master-card-icon.png"></a></li>
+      <li> <a href="#"> <img src="assets/images/footer-master-pro-icon.png"></a></li>
+      <li> <a href="#"> <img src="assets/images/footer-visa-icon.png"></a></li>
+      <li> <a href="#"> <img src="assets/images/footer-paypal-icon.png"></a></li>
+      <li> <a href="#"> <img src="assets/images/footer-amiracan-express-icon.png"></a></li>
+    </ul></span>
+  </div>
+  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12  ">
+    <p class="cl1"> Copyright 2019 Bathroom Mountain.All rights reserved</p>
+    <p class="cl2"> Registered Company;11111111,Registered VAT number; 11111111</p>
+  </div>
+</div>
+</div>
+
+</div></div>
+<footer class="only_media">
+  <div class="mbl_line"></div>
+  <div class="mbl_ftr">
+    <div class="container">
+      <h3 class="stay ">Stay in the know</h3>
+      <p class="stay2">
+        Get all the latest products, offers, and blogs direct to your inbox.
+        Sign up to our mailing list today!
+      </p>
+      <div class="input-group mb-3">
+        <input
+          type="email"
+          class="form-control"
+          placeholder="Enter your email address"
+        />
+        <div class="input-group-append">
+          <button class="last-btn" type="submit">
+            <i
+              class="fa fa-chevron-right mr-2"
+              style="font-size:15px"
+              aria-hidden="true"
+            ></i>
+          </button>
+        </div>
+      </div>
+      <p class="par1">
+        We'll never share your details, read our
+        <b class="bld">privacy policy</b> for more information
+      </p>
+
+      <section class="p-3 p-lg-5 d-flex flex-column">
+        <div class="my-auto">
+          <div id="accordion" role="tablist" aria-multiselectable="true">
+            <!-- Accordion Item 1 -->
+            <div class="card">
+              <div class="card-header" role="tab" id="accordionHeadingOne">
+                <div class="mb-0 row">
+                  <div class="col-12 no-padding accordion-head">
+                    <a
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#accordionBodyOne"
+                      aria-expanded="false"
+                      aria-controls="accordionBodyOne"
+                      class="collapsed "
+                    >
+                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                      <h5>Usefull Links</h5>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                id="accordionBodyOne"
+                class="collapse"
+                role="tabpanel"
+                aria-labelledby="accordionHeadingOne"
+                aria-expanded="false"
+              >
+                <div class="card-block col-12">
+                  <div class="row">
+                    <a class="clr_change" href="#">
+                      Get in touch
+                      <i
+                        class="fa fa-chevron-right  mr-2"
+                        style="font-size:15px"
+                        aria-hidden="true"
+                      ></i
+                    ></a>
+                    <a class="clr_change" href="#">
+                      Get in touch
+                      <i
+                        class="fa fa-chevron-right  mr-2"
+                        style="font-size:15px"
+                        aria-hidden="true"
+                      ></i
+                    ></a>
+                    <a class="clr_change" href="#">
+                      Get in touch
+                      <i
+                        class="fa fa-chevron-right  mr-2"
+                        style="font-size:15px"
+                        aria-hidden="true"
+                      ></i
+                    ></a>
+                    <a class="clr_change" href="#">
+                      Get in touch
+                      <i
+                        class="fa fa-chevron-right  mr-2"
+                        style="font-size:15px"
+                        aria-hidden="true"
+                      ></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Accordion Item 2 -->
+            <div class="card">
+              <div class="card-header" role="tab" id="accordionHeadingTwo">
+                <div class="mb-0 row">
+                  <div class="col-12 no-padding accordion-head">
+                    <a
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#accordionBodyTwo"
+                      aria-expanded="false"
+                      aria-controls="accordionBodyTwo"
+                      class="collapsed "
+                    >
+                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                      <h5>Here to help</h5>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                id="accordionBodyTwo"
+                class="collapse"
+                role="tabpanel"
+                aria-labelledby="accordionHeadingTwo"
+                aria-expanded="false"
+              >
+                <div class="card-block col-12">
+                  <div class="row">
+                    <a class="clr_change" href="#">
+                      Get in touch
+                      <i
+                        class="fa fa-chevron-right  mr-2"
+                        style="font-size:15px"
+                        aria-hidden="true"
+                      ></i
+                    ></a>
+                    <a class="clr_change" href="#">
+                      Get in touch
+                      <i
+                        class="fa fa-chevron-right  mr-2"
+                        style="font-size:15px"
+                        aria-hidden="true"
+                      ></i
+                    ></a>
+                    <a class="clr_change" href="#">
+                      Get in touch
+                      <i
+                        class="fa fa-chevron-right  mr-2"
+                        style="font-size:15px"
+                        aria-hidden="true"
+                      ></i
+                    ></a>
+                    <a class="clr_change" href="#">
+                      Get in touch
+                      <i
+                        class="fa fa-chevron-right  mr-2"
+                        style="font-size:15px"
+                        aria-hidden="true"
+                      ></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Accordion Item 3 -->
+            <div class="card">
+              <div
+                class="card-header"
+                role="tab"
+                id="accordionHeadingThree"
+              >
+                <div class="mb-0 row">
+                  <div class="col-12 no-padding accordion-head">
+                    <a
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#accordionBodyThree"
+                      aria-expanded="false"
+                      aria-controls="accordionBodyThree"
+                      class="collapsed "
+                    >
+                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                      <h5>Your links</h5>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                id="accordionBodyThree"
+                class="collapse"
+                role="tabpanel"
+                aria-labelledby="accordionHeadingThree"
+                aria-expanded="false"
+              >
+                <div class="card-block col-12">
+                  <div class="row">
+                    <a class="clr_change" href="#">
+                      Get in touch
+                      <i
+                        class="fa fa-chevron-right  mr-2"
+                        style="font-size:15px"
+                        aria-hidden="true"
+                      ></i
+                    ></a>
+                    <a class="clr_change" href="#">
+                      Get in touch
+                      <i
+                        class="fa fa-chevron-right  mr-2"
+                        style="font-size:15px"
+                        aria-hidden="true"
+                      ></i
+                    ></a>
+                    <a class="clr_change" href="#">
+                      Get in touch
+                      <i
+                        class="fa fa-chevron-right  mr-2"
+                        style="font-size:15px"
+                        aria-hidden="true"
+                      ></i
+                    ></a>
+                    <a class="clr_change" href="#">
+                      Get in touch
+                      <i
+                        class="fa fa-chevron-right  mr-2"
+                        style="font-size:15px"
+                        aria-hidden="true"
+                      ></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="social_icon">
+        <h5 class="folow">Follow Us</h5>
+
+        <form>
+          <ul class="mrg_icon">
+            <li>
+              <a href="#"
+                ><img src="assets/images/footer-fb-icon.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="assets/images/footer-twitter-icon.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="assets/images/footer-in-icon.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="assets/images/footer-insta-icon.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="assets/images/footer-youtub-icon.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="assets/images/footer-print-icon.png" alt=""
+              /></a>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="pay_method">
+    <h5 class="bld2">Acceped payment method</h5>
+    <span>
+      <ul class="method_img">
+        <li>
+          <a href="#">
+            <img src="assets/images/footer-master-card-icon.png"
+          /></a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="assets/images/footer-master-pro-icon.png"
+          /></a>
+        </li>
+        <li>
+          <a href="#"> <img src="assets/images/footer-visa-icon.png"/></a>
+        </li>
+        <li>
+          <a href="#"> <img src="assets/images/footer-paypal-icon.png"/></a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="assets/images/footer-amiracan-express-icon.png"
+          /></a>
+        </li></ul
+    ></span>
+    <p class="cl1">Copyright 2019 Bathroom Mountain.All rights reserved</p>
+    <p class="cl2">
+      Registered Company;11111111,Registered VAT number; 11111111
+    </p>
+  </div>
+</footer>
+
+
+
+
+
+</body></html>
